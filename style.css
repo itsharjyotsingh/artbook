@@ -20,17 +20,21 @@ body {
     object-fit: fill;
 }
 
-#intro div {
+#intro>div {
     position: absolute;
     color: whitesmoke;
     text-align: center;
     letter-spacing: 0.7pc;
     font-weight: 200;
+    user-select: none;
 }
 
 #intro #introH1 {
     font-size: 3.7rem;
     font-family: "Baskervville SC", serif;
+    width: auto;
+    height: auto;
+    overflow: hidden;
 }
 
 #intro #introH2 {
@@ -50,4 +54,18 @@ body {
     mix-blend-mode: difference;
     border-radius: 100%;
     z-index: 2;
+}
+
+#intro lottie-player {
+    scale: 0.7;
+}
+
+#intro #lottie-container {
+    position: absolute;
+    width: fit-content;
+    bottom: 1%;
+    left: 1%;
+    scale: 0.5;
+    z-index: 1;
+    overflow: hidden;
 }
