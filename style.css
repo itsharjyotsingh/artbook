@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+
+#intro img {
+    width: 100%;
+    object-fit: fill;
+}
+
+#intro div {
+    position: absolute;
+    color: whitesmoke;
+    text-align: center;
+    letter-spacing: 0.7pc;
+    font-weight: 200;
+}
+
+#intro #introH1 {
+    font-size: 3.7rem;
+    font-family: "Baskervville SC", serif;
+}
+
+#intro #introH2 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1pc;
+    font-size: 2.7rem;
+}
+
+#cursor {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: whitesmoke;
+    mix-blend-mode: difference;
+    border-radius: 100%;
+    z-index: 9;
+}
