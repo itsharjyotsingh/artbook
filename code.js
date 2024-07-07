@@ -46,5 +46,6 @@ function introSectionCusrorFollower() {
             });
     });
 }
-introSectionCusrorFollower();
-
+if (!navigator.userAgentData.mobile) {
+    introSectionCusrorFollower();
+}

@@ -49,5 +49,5 @@ body {
     background-color: whitesmoke;
     mix-blend-mode: difference;
     border-radius: 100%;
-    z-index: 9;
+    z-index: 2;
 }
