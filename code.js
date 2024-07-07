@@ -11,7 +11,7 @@ function downArrow() {
         opacity: 0,
         translateY: -400,
         ease: "power4.out",
-        delay: 1.5,
+        delay: 2.2,
     });
 }
 
@@ -100,6 +100,23 @@ function introSectionHeadings() {
                 });
                 break;
         }
+    });
+
+    var subText = document.getElementById("introH2");
+    subText.children[0].style.position = "relative";
+    subText.children[2].style.position = "relative";
+    gsap.to(subText.children[0], {
+        duration: 1,
+        top: -80,
+        ease: "power4.out",
+        delay: 0.6,
+    });
+
+    gsap.to(subText.children[2], {
+        duration: 1,
+        top: -80,
+        ease: "power4.out",
+        delay: 1,
     });
 }
 

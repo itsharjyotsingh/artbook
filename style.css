@@ -38,10 +38,37 @@ body {
 }
 
 #intro #introH2 {
+    margin-top: 100px;
     font-family: "Raleway", sans-serif;
     font-weight: 100;
+    display: flex;
     letter-spacing: 0.1pc;
+    justify-content: space-around;
+    width: auto;
+    height: 80px;
     font-size: 2.7rem;
+    overflow: hidden;
+}
+
+#introH2 hr {
+    width: 1;
+    align-self: center;
+    height: 40%;
+    border: 1px solid rgb(120, 120, 120);
+    margin: 0px;
+    padding: 0px;
+}
+
+#introH2 H1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+    margin: 0px;
+    padding: 0px;
+}
+
+#introH2 .first , .second {
+    display: flex;
+    flex-direction: column;
 }
 
 #cursor {
