@@ -21,6 +21,7 @@ function introSectionHeadings() {
         var span = document.createElement("span");
         span.innerText = char;
         span.style.opacity = 1;
+        span.style.width = "auto";
         span.style.position = "relative";
         span.style.display = "inline-block";
         span.style.transformStyle = "preserve-3d";
@@ -169,6 +170,35 @@ function scrollTrigger_introSection() {
     var heading2 = document.getElementById("introH2");
     var downArrow = document.getElementById("lottie-container");
     gsap.registerPlugin(ScrollTrigger);
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: document.body,
+            start: 0,
+            end: () => window.innerHeight * 1.2,
+            scrub: 0.6
+        }
+    });
+    
+    let headl = gsap.timeline({
+        scrollTrigger: {
+            trigger: document.body,
+            start: 0,
+            end: () => window.innerHeight * 1.2,
+            scrub: 0.6
+        }
+    });
+    headl.fromTo(heading1, {
+        top: '20vw',
+        yPercent: -80,
+        scale: 1.7,
+    }, {
+        top: '0vw',
+        yPercent: 0,
+        scale: 1,
+        duration: 0.8
+    });
+
     gsap.to(heading2, {
         scrollTrigger: {
             trigger: introSection,

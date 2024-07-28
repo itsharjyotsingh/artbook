@@ -11,6 +11,7 @@ body::-webkit-scrollbar {
 body {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background-color: black;
 }
 
 ::-webkit-scrollbar {
@@ -23,7 +24,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: black;
     height: 100vh;
     width: 100%;
     cursor: none;
@@ -43,8 +43,14 @@ body {
     user-select: none;
 }
 
-#intro #introH1 {
-    font-size: 4rem;
+#introH1 {
+    position: fixed;
+    top: 40%;
+    text-align: center;
+    width: auto;
+    color: whitesmoke;
+    background-color: black;
+    font-size: 5rem;
     font-family: "Baskervville SC", serif;
     width: auto;
     position: sticky;
@@ -81,9 +87,12 @@ body {
     padding: 0px;
 }
 
-#introH2 .first , .second {
+#introH2 .first,
+.second {
     display: flex;
     flex-direction: column;
+    width: 200px;
+    text-align: center;
 }
 
 #cursor {
@@ -114,5 +123,6 @@ body {
 }
 
 #artwork {
-    height: 100vh;
+    height: 200vh;
+    background-color: antiquewhite;
 }
