@@ -50,7 +50,8 @@ body {
     width: auto;
     color: whitesmoke;
     background-color: black;
-    font-size: 5rem;
+    font-size: 4vw;
+    user-select: none;
     font-family: "Baskervville SC", serif;
     width: auto;
     position: sticky;
@@ -67,7 +68,7 @@ body {
     justify-content: space-around;
     width: auto;
     height: 80px;
-    font-size: 2.7rem;
+    font-size: 3vw;
     overflow: hidden;
 }
 
@@ -112,14 +113,29 @@ body {
 }
 
 #intro #lottie-container {
+    left: 1%;
     position: absolute;
     width: fit-content;
     bottom: 1%;
+    transform: translateX(-50%);
     left: 1%;
     scale: 0.5;
     z-index: 1;
     overflow: hidden;
     border-radius: 100%;
+}
+
+@media (max-width: 768px) {
+    #intro #lottie-container {
+        left: 50%;
+        position: absolute;
+        width: fit-content;
+        scale: 0.1;
+        transform: translateX(-50%);
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 100%;
+    }
 }
 
 #artwork {
