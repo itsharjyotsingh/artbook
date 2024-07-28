@@ -4,6 +4,20 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
 #intro {
     display: flex;
     flex-direction: column;
@@ -30,9 +44,10 @@ body {
 }
 
 #intro #introH1 {
-    font-size: 3.7rem;
+    font-size: 4rem;
     font-family: "Baskervville SC", serif;
     width: auto;
+    position: sticky;
     height: auto;
     overflow: hidden;
 }
@@ -95,4 +110,9 @@ body {
     scale: 0.5;
     z-index: 1;
     overflow: hidden;
+    border-radius: 100%;
+}
+
+#artwork {
+    height: 100vh;
 }

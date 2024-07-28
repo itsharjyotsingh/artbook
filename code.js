@@ -1,8 +1,3 @@
-function initialize() {
-    introSectionHeadings();
-    downArrow();
-}
-
 function downArrow() {
     var container = document.getElementById("lottie-container").children[0];
 
@@ -21,7 +16,7 @@ function introSectionHeadings() {
     var mainText = document.getElementById("introH1");
     var heading1 = "Aishwarya";
     var chars = heading1.split("");
-
+    
     chars.forEach((char, index) => {
         var span = document.createElement("span");
         span.innerText = char;
@@ -56,7 +51,7 @@ function introSectionHeadings() {
                     });
                 }
                 break;
-            case "i":
+                case "i":
                 gsap.from(span, {
                     opacity: 0,
                     scale: 0,
@@ -65,8 +60,8 @@ function introSectionHeadings() {
                     ease: "power1.inout",
                 });
                 break;
-            case "r":
-                gsap.from(span, {
+                case "r":
+                    gsap.from(span, {
                     opacity: 0,
                     scale: 0,
                     duration: 1,
@@ -123,7 +118,7 @@ function introSectionHeadings() {
 function introSectionCusrorFollower() {
     var introArea = document.getElementById("intro");
     var cursor = document.getElementById("cursor");
-
+    
     introArea.addEventListener("mouseenter", () => {
         gsap.to(cursor,
             {
@@ -131,7 +126,7 @@ function introSectionCusrorFollower() {
                 duration: 0.2,
                 ease: "power2.inOut"
             });
-    });
+        });
 
     introArea.addEventListener("mouseleave", () => {
         gsap.to(cursor,
@@ -167,7 +162,44 @@ function introSectionCusrorFollower() {
             });
     });
 }
-initialize();
-if (!navigator.userAgentData.mobile) {
-    introSectionCusrorFollower();
+
+function scrollTrigger_introSection() {
+    var introSection = document.getElementById("intro");
+    var heading1 = document.getElementById("introH1");
+    var heading2 = document.getElementById("introH2");
+    var downArrow = document.getElementById("lottie-container");
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(heading2, {
+        scrollTrigger: {
+            trigger: introSection,
+            start: "top 0",
+            end: "+=200",
+            scrub: 2,
+        },
+        y: -50,
+        opacity: 0,
+        duration: 1,
+    });
+
+    gsap.to(downArrow, {
+        scrollTrigger: {
+            trigger: introSection,
+            start: "top 0",
+            end: "+=1",
+            scrub: 2,
+        },
+        scale: 0,
+        duration: 1,
+    });
 }
+
+function initialize() {
+    if (!navigator.userAgentData.mobile) {
+        introSectionCusrorFollower();
+    }
+    introSectionHeadings();
+    downArrow();
+    scrollTrigger_introSection();
+}
+
+initialize();
