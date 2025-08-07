@@ -14,9 +14,9 @@ function introSectionHeadings() {
     gsap.registerPlugin(TextPlugin);
 
     var mainText = document.getElementById("introH1");
-    var heading1 = "Aishwarya";
+    var heading1 = "Soumya";
     var chars = heading1.split("");
-    
+
     chars.forEach((char, index) => {
         var span = document.createElement("span");
         span.innerText = char;
@@ -28,7 +28,7 @@ function introSectionHeadings() {
         mainText.appendChild(span);
 
         switch (char.toLowerCase()) {
-            case "a":
+            case "s":
                 if (index === 0) {
                     gsap.from(span, {
                         duration: 1,
@@ -52,7 +52,7 @@ function introSectionHeadings() {
                     });
                 }
                 break;
-                case "i":
+            case "o":
                 gsap.from(span, {
                     opacity: 0,
                     scale: 0,
@@ -61,8 +61,8 @@ function introSectionHeadings() {
                     ease: "power1.inout",
                 });
                 break;
-                case "r":
-                    gsap.from(span, {
+            case "u":
+                gsap.from(span, {
                     opacity: 0,
                     scale: 0,
                     duration: 1,
@@ -72,7 +72,7 @@ function introSectionHeadings() {
                     ease: "power1.inout",
                 });
                 break;
-            case "s":
+            case "m":
                 gsap.from(span, {
                     opacity: 0,
                     duration: 2,
@@ -80,7 +80,7 @@ function introSectionHeadings() {
                     ease: "power4.out",
                 });
                 break;
-            case "h":
+            case "y":
                 gsap.from(span, {
                     opacity: 0,
                     duration: 1,
@@ -119,7 +119,7 @@ function introSectionHeadings() {
 function introSectionCusrorFollower() {
     var introArea = document.getElementById("intro");
     var cursor = document.getElementById("cursor");
-    
+
     introArea.addEventListener("mouseenter", () => {
         gsap.to(cursor,
             {
@@ -127,7 +127,7 @@ function introSectionCusrorFollower() {
                 duration: 0.2,
                 ease: "power2.inOut"
             });
-        });
+    });
 
     introArea.addEventListener("mouseleave", () => {
         gsap.to(cursor,
@@ -179,7 +179,7 @@ function scrollTrigger_introSection() {
             scrub: 0.6
         }
     });
-    
+
     let headl = gsap.timeline({
         scrollTrigger: {
             trigger: document.body,
