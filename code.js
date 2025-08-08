@@ -103,14 +103,14 @@ function introSectionHeadings() {
     subText.children[2].style.position = "relative";
     gsap.to(subText.children[0], {
         duration: 1,
-        top: -80,
+        top: -60,
         ease: "power4.out",
         delay: 0.6,
     });
 
     gsap.to(subText.children[2], {
         duration: 1,
-        top: -80,
+        top: -60,
         ease: "power4.out",
         delay: 1,
     });
